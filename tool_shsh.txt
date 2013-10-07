@@ -1,1 +1,15 @@
 ./make-standalone-toolchain.sh --platform=android-8 --ndk-dir=/Users/liuyang/Downloads/android-ndk-r9 --install-dir=/Users/liuyang/my-android-toolchain [ --arch=arm ] --system=darwin-x86_64
+
+  <ItemGroup>
+    <AndroidNativeLibrary Include="/Users/liuyang/my-android-toolchain/sysroot/usr/lib/libssl.so">
+        <Abi>armeabi-v7a</Abi>
+    </AndroidNativeLibrary>
+
+    <AndroidNativeLibrary Include="/Users/liuyang/my-android-toolchain/sysroot/usr/lib/libgit2.so">
+        <Abi>armeabi-v7a</Abi>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="/Users/liuyang/my-android-toolchain/sysroot/usr/lib/libcrypto.so">
+        <Abi>armeabi-v7a</Abi>
+    </AndroidNativeLibrary>
+  </ItemGroup>
+
