@@ -1,0 +1,1 @@
+./make-standalone-toolchain.sh --platform=android-8 --ndk-dir=/Users/liuyang/Downloads/android-ndk-r9 --install-dir=/Users/liuyang/my-android-toolchain [ --arch=arm ] --system=darwin-x86_64
