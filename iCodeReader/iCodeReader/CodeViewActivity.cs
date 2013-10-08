@@ -9,6 +9,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+using Android.Webkit;
+
 namespace iCodeReader
 {
 	[Activity (Label = "CodeViewActivity")]			
@@ -19,6 +21,18 @@ namespace iCodeReader
 			base.OnCreate (bundle);
 
 			SetContentView (Resource.Layout.CodeView);
+
+			WebView browser = FindViewById<WebView> (Resource.Id.webView1);
+
+			browser.Settings.JavaScriptEnabled = true;
+			browser.Settings.JavaScriptCanOpenWindowsAutomatically = true;
+
+			browser.SetWebViewClient (new WebViewClient ());
+
+			browser.Settings.BuiltInZoomControls = true;
+			browser.Settings.SetSupportZoom (true);
+
+			browser.LoadUrl ("http://www.bing.com");
 			// Create your application here
 		}
 	}
