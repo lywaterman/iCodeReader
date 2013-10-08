@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F35F3C4E-7222-4F2F-A201-4C0CAFDF3835}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>iCodeReader</RootNamespace>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AssemblyName>iCodeReader</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AndroidSupportedAbis>armeabi-v7a</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LibGit2Sharp\AmbiguousSpecificationException.cs" />
+    <Compile Include="LibGit2Sharp\BareRepositoryException.cs" />
+    <Compile Include="LibGit2Sharp\Blob.cs" />
+    <Compile Include="LibGit2Sharp\BlobExtensions.cs" />
+    <Compile Include="LibGit2Sharp\Branch.cs" />
+    <Compile Include="LibGit2Sharp\BranchCollection.cs" />
+    <Compile Include="LibGit2Sharp\BranchCollectionExtensions.cs" />
+    <Compile Include="LibGit2Sharp\BranchTrackingDetails.cs" />
+    <Compile Include="LibGit2Sharp\BranchUpdater.cs" />
+    <Compile Include="LibGit2Sharp\ChangeKind.cs" />
+    <Compile Include="LibGit2Sharp\Changes.cs" />
+    <Compile Include="LibGit2Sharp\CheckoutCallbacks.cs" />
+    <Compile Include="LibGit2Sharp\CheckoutModifiers.cs" />
+    <Compile Include="LibGit2Sharp\CheckoutNotificationOptions.cs" />
+    <Compile Include="LibGit2Sharp\CheckoutOptions.cs" />
+    <Compile Include="LibGit2Sharp\Commit.cs" />
+    <Compile Include="LibGit2Sharp\CommitFilter.cs" />
+    <Compile Include="LibGit2Sharp\CommitLog.cs" />
+    <Compile Include="LibGit2Sharp\CommitRewriteInfo.cs" />
+    <Compile Include="LibGit2Sharp\CommitSortStrategies.cs" />
+    <Compile Include="LibGit2Sharp\CompareOptions.cs" />
+    <Compile Include="LibGit2Sharp\Configuration.cs" />
+    <Compile Include="LibGit2Sharp\ConfigurationEntry.cs" />
+    <Compile Include="LibGit2Sharp\ConfigurationExtensions.cs" />
+    <Compile Include="LibGit2Sharp\ConfigurationLevel.cs" />
+    <Compile Include="LibGit2Sharp\Conflict.cs" />
+    <Compile Include="LibGit2Sharp\ConflictCollection.cs" />
+    <Compile Include="LibGit2Sharp\ContentChanges.cs" />
+    <Compile Include="LibGit2Sharp\Credentials.cs" />
+    <Compile Include="LibGit2Sharp\CurrentOperation.cs" />
+    <Compile Include="LibGit2Sharp\DetachedHead.cs" />
+    <Compile Include="LibGit2Sharp\Diff.cs" />
+    <Compile Include="LibGit2Sharp\DiffModifiers.cs" />
+    <Compile Include="LibGit2Sharp\DiffTargets.cs" />
+    <Compile Include="LibGit2Sharp\DirectReference.cs" />
+    <Compile Include="LibGit2Sharp\ExplicitPathsOptions.cs" />
+    <Compile Include="LibGit2Sharp\FetchHead.cs" />
+    <Compile Include="LibGit2Sharp\FileStatus.cs" />
+    <Compile Include="LibGit2Sharp\GitLink.cs" />
+    <Compile Include="LibGit2Sharp\GitObject.cs" />
+    <Compile Include="LibGit2Sharp\Handlers.cs" />
+    <Compile Include="LibGit2Sharp\ICommitLog.cs" />
+    <Compile Include="LibGit2Sharp\IQueryableCommitLog.cs" />
+    <Compile Include="LibGit2Sharp\IRepository.cs" />
+    <Compile Include="LibGit2Sharp\Ignore.cs" />
+    <Compile Include="LibGit2Sharp\Index.cs" />
+    <Compile Include="LibGit2Sharp\IndexEntry.cs" />
+    <Compile Include="LibGit2Sharp\InvalidSpecificationException.cs" />
+    <Compile Include="LibGit2Sharp\LibGit2SharpException.cs" />
+    <Compile Include="LibGit2Sharp\LockedFileException.cs" />
+    <Compile Include="LibGit2Sharp\MatchedPathsAggregator.cs" />
+    <Compile Include="LibGit2Sharp\MergeConflictException.cs" />
+    <Compile Include="LibGit2Sharp\MergeHead.cs" />
+    <Compile Include="LibGit2Sharp\Mode.cs" />
+    <Compile Include="LibGit2Sharp\NameConflictException.cs" />
+    <Compile Include="LibGit2Sharp\Network.cs" />
+    <Compile Include="LibGit2Sharp\NetworkExtensions.cs" />
+    <Compile Include="LibGit2Sharp\NonFastForwardException.cs" />
+    <Compile Include="LibGit2Sharp\Note.cs" />
+    <Compile Include="LibGit2Sharp\NoteCollection.cs" />
+    <Compile Include="LibGit2Sharp\ObjectDatabase.cs" />
+    <Compile Include="LibGit2Sharp\ObjectId.cs" />
+    <Compile Include="LibGit2Sharp\ObjectType.cs" />
+    <Compile Include="LibGit2Sharp\OdbBackend.cs" />
+    <Compile Include="LibGit2Sharp\OdbBackendStream.cs" />
+    <Compile Include="LibGit2Sharp\PushResult.cs" />
+    <Compile Include="LibGit2Sharp\PushStatusError.cs" />
+    <Compile Include="LibGit2Sharp\Reference.cs" />
+    <Compile Include="LibGit2Sharp\ReferenceCollection.cs" />
+    <Compile Include="LibGit2Sharp\ReferenceCollectionExtensions.cs" />
+    <Compile Include="LibGit2Sharp\ReferenceExtensions.cs" />
+    <Compile Include="LibGit2Sharp\ReferenceWrapper.cs" />
+    <Compile Include="LibGit2Sharp\ReflogCollection.cs" />
+    <Compile Include="LibGit2Sharp\ReflogEntry.cs" />
+    <Compile Include="LibGit2Sharp\Remote.cs" />
+    <Compile Include="LibGit2Sharp\RemoteCallbacks.cs" />
+    <Compile Include="LibGit2Sharp\RemoteCollection.cs" />
+    <Compile Include="LibGit2Sharp\RemoteCompletionType.cs" />
+    <Compile Include="LibGit2Sharp\RemoteUpdater.cs" />
+    <Compile Include="LibGit2Sharp\RemoveFromIndexException.cs" />
+    <Compile Include="LibGit2Sharp\Repository.cs" />
+    <Compile Include="LibGit2Sharp\RepositoryExtensions.cs" />
+    <Compile Include="LibGit2Sharp\RepositoryInformation.cs" />
+    <Compile Include="LibGit2Sharp\RepositoryNotFoundException.cs" />
+    <Compile Include="LibGit2Sharp\RepositoryOptions.cs" />
+    <Compile Include="LibGit2Sharp\RepositoryStatus.cs" />
+    <Compile Include="LibGit2Sharp\ResetOptions.cs" />
+    <Compile Include="LibGit2Sharp\RewriteHistoryOptions.cs" />
+    <Compile Include="LibGit2Sharp\Signature.cs" />
+    <Compile Include="LibGit2Sharp\StageLevel.cs" />
+    <Compile Include="LibGit2Sharp\Stash.cs" />
+    <Compile Include="LibGit2Sharp\StashCollection.cs" />
+    <Compile Include="LibGit2Sharp\StashModifiers.cs" />
+    <Compile Include="LibGit2Sharp\StatusEntry.cs" />
+    <Compile Include="LibGit2Sharp\Submodule.cs" />
+    <Compile Include="LibGit2Sharp\SubmoduleCollection.cs" />
+    <Compile Include="LibGit2Sharp\SubmoduleExtensions.cs" />
+    <Compile Include="LibGit2Sharp\SubmoduleIgnore.cs" />
+    <Compile Include="LibGit2Sharp\SubmoduleStatus.cs" />
+    <Compile Include="LibGit2Sharp\SubmoduleUpdate.cs" />
+    <Compile Include="LibGit2Sharp\SymbolicReference.cs" />
+    <Compile Include="LibGit2Sharp\Tag.cs" />
+    <Compile Include="LibGit2Sharp\TagAnnotation.cs" />
+    <Compile Include="LibGit2Sharp\TagCollection.cs" />
+    <Compile Include="LibGit2Sharp\TagCollectionExtensions.cs" />
+    <Compile Include="LibGit2Sharp\TagFetchMode.cs" />
+    <Compile Include="LibGit2Sharp\TransferProgress.cs" />
+    <Compile Include="LibGit2Sharp\Tree.cs" />
+    <Compile Include="LibGit2Sharp\TreeChanges.cs" />
+    <Compile Include="LibGit2Sharp\TreeDefinition.cs" />
+    <Compile Include="LibGit2Sharp\TreeDefinitionExtensions.cs" />
+    <Compile Include="LibGit2Sharp\TreeEntry.cs" />
+    <Compile Include="LibGit2Sharp\TreeEntryChanges.cs" />
+    <Compile Include="LibGit2Sharp\TreeEntryDefinition.cs" />
+    <Compile Include="LibGit2Sharp\TreeEntryTargetType.cs" />
+    <Compile Include="LibGit2Sharp\UnbornBranchException.cs" />
+    <Compile Include="LibGit2Sharp\UnmatchedPathException.cs" />
+    <Compile Include="LibGit2Sharp\UnmergedIndexEntriesException.cs" />
+    <Compile Include="LibGit2Sharp\UserCanceledException.cs" />
+    <Compile Include="LibGit2Sharp\VoidReference.cs" />
+    <Compile Include="LibGit2Sharp\Core\ArrayMarshaler.cs" />
+    <Compile Include="LibGit2Sharp\Core\Ensure.cs" />
+    <Compile Include="LibGit2Sharp\Core\EnumExtensions.cs" />
+    <Compile Include="LibGit2Sharp\Core\Epoch.cs" />
+    <Compile Include="LibGit2Sharp\Core\FilePath.cs" />
+    <Compile Include="LibGit2Sharp\Core\FilePathExtensions.cs" />
+    <Compile Include="LibGit2Sharp\Core\FilePathMarshaler.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitBranchType.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitCheckoutOpts.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitCloneOptions.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitConfigEntry.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitDiff.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitDiffExtensions.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitDirection.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitError.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitErrorCategory.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitErrorCode.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitIndexEntry.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitIndexTime.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitObjectLazyGroup.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitObjectType.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitOdbBackend.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitOdbBackendStream.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitOid.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitReferenceType.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitRemoteCallbacks.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitRemoteHead.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitRepositoryInitOptions.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitSignature.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitStrArrayIn.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitTime.cs" />
+    <Compile Include="LibGit2Sharp\Core\GitTransferProgress.cs" />
+    <Compile Include="LibGit2Sharp\Core\HistoryRewriter.cs" />
+    <Compile Include="LibGit2Sharp\Core\ILazy.cs" />
+    <Compile Include="LibGit2Sharp\Core\LambdaEqualityHelper.cs" />
+    <Compile Include="LibGit2Sharp\Core\LazyGroup.cs" />
+    <Compile Include="LibGit2Sharp\Core\LookUpOptions.cs" />
+    <Compile Include="LibGit2Sharp\Core\NativeDllName.cs" />
+    <Compile Include="LibGit2Sharp\Core\NativeMethods.cs" />
+    <Compile Include="LibGit2Sharp\Core\ObjectSafeWrapper.cs" />
+    <Compile Include="LibGit2Sharp\Core\PathCase.cs" />
+    <Compile Include="LibGit2Sharp\Core\Proxy.cs" />
+    <Compile Include="LibGit2Sharp\Core\RawContentStream.cs" />
+    <Compile Include="LibGit2Sharp\Core\RepositoryOpenFlags.cs" />
+    <Compile Include="LibGit2Sharp\Core\SubmoduleLazyGroup.cs" />
+    <Compile Include="LibGit2Sharp\Core\UnSafeNativeMethods.cs" />
+    <Compile Include="LibGit2Sharp\Core\Utf8Marshaler.cs" />
+    <Compile Include="LibGit2Sharp\Core\Compat\EnumExtensions.cs" />
+    <Compile Include="LibGit2Sharp\Core\Compat\Environment.cs" />
+    <Compile Include="LibGit2Sharp\Core\Compat\Lazy.cs" />
+    <Compile Include="LibGit2Sharp\Core\Compat\Tuple.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\ConfigurationSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\DiffListSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\GitConfigEntryHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\GitErrorSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\GitObjectSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\GitRefSpecHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\IndexEntrySafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\IndexSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\NotOwnedSafeHandleBase.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\NoteSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\NullGitObjectSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\NullIndexSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\NullRepositorySafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\ObjectDatabaseSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\OidSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\PushSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\ReferenceSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\ReflogEntrySafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\ReflogSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\RemoteSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\RepositorySafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\RevWalkerSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\SafeHandleBase.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\SafeHandleExtensions.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\SignatureSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\SubmoduleSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\TreeBuilderSafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\TreeEntrySafeHandle.cs" />
+    <Compile Include="LibGit2Sharp\Core\Handles\TreeEntrySafeHandle_Owned.cs" />
+    <Compile Include="LibGit2Sharp\Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="LibGit2Sharp\CopyNativeDependencies.targets" />
+    <None Include="LibGit2Sharp\CustomDictionary.xml" />
+    <None Include="LibGit2Sharp\LibGit2Sharp.csproj" />
+    <None Include="LibGit2Sharp\UniqueIdentifier.targets" />
+    <None Include="LibGit2Sharp\libgit2_hash.txt" />
+    <None Include="LibGit2Sharp\libgit2sharp_hash.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AndroidNativeLibrary Include="/Users/liuyang/my-android-toolchain/sysroot/usr/lib/libssl.so">
+        <Abi>armeabi-v7a</Abi>
+    </AndroidNativeLibrary>
+
+    <AndroidNativeLibrary Include="/Users/liuyang/my-android-toolchain/sysroot/usr/lib/libgit2.so">
+        <Abi>armeabi-v7a</Abi>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="/Users/liuyang/my-android-toolchain/sysroot/usr/lib/libcrypto.so">
+        <Abi>armeabi-v7a</Abi>
+    </AndroidNativeLibrary>
+  </ItemGroup>
+
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="LibGit2Sharp\" />
+  </ItemGroup>
+</Project>
