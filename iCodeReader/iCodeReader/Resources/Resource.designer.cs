@@ -63,11 +63,11 @@ namespace iCodeReader
 			// aapt resource value: 0x7f050001
 			public const int aButton = 2131034113;
 			
-			// aapt resource value: 0x7f050000
-			public const int helloLabel = 2131034112;
-			
 			// aapt resource value: 0x7f050002
-			public const int webView1 = 2131034114;
+			public const int editText1 = 2131034114;
+			
+			// aapt resource value: 0x7f050000
+			public const int webView1 = 2131034112;
 			
 			static Id()
 			{
@@ -83,7 +83,10 @@ namespace iCodeReader
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int CodeView = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Main = 2130903041;
 			
 			static Layout()
 			{

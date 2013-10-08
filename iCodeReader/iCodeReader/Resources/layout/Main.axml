@@ -3,16 +3,18 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <TextView
-        android:id="@+id/helloLabel"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/helloLabelText" />
     <Button
         android:id="@+id/aButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/helloButtonText" />
+        android:text="@string/helloButtonText"
+        android:layout_marginTop="0.0dp" />
+    <EditText
+        android:inputType="textUri"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
+        android:phoneNumber="false" />
     <WebView
         android:layout_width="fill_parent"
         android:layout_height="match_parent"

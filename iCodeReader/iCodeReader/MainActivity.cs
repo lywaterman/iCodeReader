@@ -34,6 +34,12 @@ namespace iCodeReader
 			// Get our button from the layout resource,
 			// and attach an event to it
 			Button button = FindViewById<Button> (Resource.Id.aButton);
+
+			EditText edit = FindViewById<EditText> (Resource.Id.editText1);
+
+			Console.WriteLine (System.Environment.Version);
+
+			Console.WriteLine (System.Environment.OSVersion);
 			
 			button.Click += delegate {
 				button.Text = string.Format ("{0} clicks!", count++);
@@ -48,16 +54,11 @@ namespace iCodeReader
 
 				System.Console.WriteLine(dir.AbsolutePath);
 
-				var cer = new Credentials();
+				Intent intent = new Intent(this, typeof(CodeViewActivity)); 
 
-				var opt = new RepositoryOptions();
+				StartActivity(intent);
 
-				//var rep = new Repository("https://github.com/lywaterman/testlibgit2sharp.git", opt);
-
-				cer.Username = "lywaterman";
-				cer.Password = "ly5232751";
-
-				Repository.CloneNoCheckCer("https://github.com/lywaterman/testlibgit2sharp.git", dir.AbsolutePath+"/test", false, true, null, null, cer);
+				//Repository.CloneNoCheckCer("https://github.com/lywaterman/testlibgit2sharp.git", dir.AbsolutePath+"/test");
 			};
 
 			WebView browser = FindViewById<WebView> (Resource.Id.webView1);

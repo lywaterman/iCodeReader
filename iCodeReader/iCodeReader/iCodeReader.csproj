@@ -251,6 +251,7 @@
     <Compile Include="LibGit2Sharp\Core\Handles\TreeEntrySafeHandle.cs" />
     <Compile Include="LibGit2Sharp\Core\Handles\TreeEntrySafeHandle_Owned.cs" />
     <Compile Include="LibGit2Sharp\Properties\AssemblyInfo.cs" />
+    <Compile Include="CodeViewActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -267,8 +268,8 @@
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\layout\CodeView.axml" />
   </ItemGroup>
-
   <ItemGroup>
     <AndroidNativeLibrary Include="/Users/liuyang/my-android-toolchain/sysroot/usr/lib/libssl.so">
         <Abi>armeabi-v7a</Abi>
@@ -281,7 +282,6 @@
         <Abi>armeabi-v7a</Abi>
     </AndroidNativeLibrary>
   </ItemGroup>
-
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="LibGit2Sharp\" />
