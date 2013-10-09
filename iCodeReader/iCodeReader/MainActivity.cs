@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.InteropServices;
+using System.IO;
 using Android.App;
 using Android.Content;
 using Android.Runtime;
@@ -10,6 +11,8 @@ using Android.Webkit;
 
 using LibGit2Sharp;
 using LibGit2Sharp.Core;
+
+using clojure.lang;
 
 namespace iCodeReader
 {
@@ -43,20 +46,35 @@ namespace iCodeReader
 			
 			button.Click += delegate {
 				button.Text = string.Format ("{0} clicks!", count++);
-				System.Console.WriteLine("i call giterr_set_oom");
-				giterr_set_oom();
-				var x = git_libgit2_capabilities();
 
-				var dir = this.BaseContext.GetDir("test", FileCreationMode.WorldWriteable);
+				//var stream = this.BaseContext.Assets.Open("clojure/core.clj");
 
-				System.Console.WriteLine(dir);
-				System.Console.WriteLine(x);
+				//string temp_test = "";
+				//using (StreamReader sr = new StreamReader (this.BaseContext.Assets.Open ("clojure/core.clj")))
+				//	temp_test = sr.ReadToEnd ();
+ 				
+				//RT.readString(temp_test);
 
-				System.Console.WriteLine(dir.AbsolutePath);
+				//Var foo = RT.var("user", "foo");
 
-				Intent intent = new Intent(this, typeof(CodeViewActivity)); 
+				//Object result = foo.invoke("Hi", "there");
 
-				StartActivity(intent);
+				//Console.WriteLine(result);
+
+				//System.Console.WriteLine("i call giterr_set_oom");
+				//giterr_set_oom();
+				//var x = git_libgit2_capabilities();
+
+				//var dir = this.BaseContext.GetDir("test", FileCreationMode.WorldWriteable);
+
+				//System.Console.WriteLine(dir);
+				//System.Console.WriteLine(x);
+
+				//System.Console.WriteLine(dir.AbsolutePath);
+
+				//Intent intent = new Intent(this, typeof(CodeViewActivity)); 
+
+				//StartActivity(intent);
 
 				//Repository.CloneNoCheckCer("https://github.com/lywaterman/testlibgit2sharp.git", dir.AbsolutePath+"/test");
 			};
