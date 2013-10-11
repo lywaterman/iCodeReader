@@ -28,7 +28,9 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>false</ConsolePause>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <AndroidSupportedAbis>armeabi-v7a</AndroidSupportedAbis>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
+    <NoStdLib>true</NoStdLib>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -39,20 +41,15 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <ConsolePause>false</ConsolePause>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoStdLib>true</NoStdLib>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml">
       <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.Xml.dll</HintPath>
     </Reference>
-    <Reference Include="System.Core">
-      <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="Clojure">
-      <HintPath>Assets\Clojure.dll</HintPath>
+      <HintPath>..\..\..\clojure-clr-mono\bin\4.0\Release\Clojure.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Dynamic">
       <HintPath>Assets\Microsoft.Dynamic.dll</HintPath>
@@ -63,29 +60,32 @@
     <Reference Include="Microsoft.Scripting">
       <HintPath>Assets\Microsoft.Scripting.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.Remoting">
-      <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.Runtime.Remoting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data">
-      <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.Data.DataSetExtensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data.Linq">
-      <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.Data.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ServiceModel">
-      <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.ServiceModel.dll</HintPath>
+    <Reference Include="cc">
+      <HintPath>Assets\cc.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq">
       <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.Xml.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="System.Dynamic">
+      <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System.Numerics">
       <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.Numerics.dll</HintPath>
     </Reference>
-    <Reference Include="System.Dynamic">
-      <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.Dynamic.dll</HintPath>
+    <Reference Include="System.Data.DataSetExtensions">
+      <HintPath>..\..\..\..\..\..\usr\local\lib\mono\4.0\System.Data.DataSetExtensions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -312,138 +312,18 @@
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\layout\CodeView.axml" />
   </ItemGroup>
-    <ItemGroup>
-    <AndroidNativeLibrary Include="/Users/liuyang/my-android-toolchain/sysroot/usr/lib/libssl.so">
-        <Abi>armeabi-v7a</Abi>
-    </AndroidNativeLibrary>
-
-    <AndroidNativeLibrary Include="/Users/liuyang/my-android-toolchain/sysroot/usr/lib/libgit2.so">
-        <Abi>armeabi-v7a</Abi>
-    </AndroidNativeLibrary>
-    <AndroidNativeLibrary Include="/Users/liuyang/my-android-toolchain/sysroot/usr/lib/libcrypto.so">
-        <Abi>armeabi-v7a</Abi>
-    </AndroidNativeLibrary>
+  <ItemGroup>
+    <AndroidNativeLibrary Include="/Users/liuyang/my-android-toolchain/sysroot/usr/lib/armeabi-v7a/libssl.so" />
+    <AndroidNativeLibrary Include="/Users/liuyang/my-android-toolchain/sysroot/usr/lib/armeabi-v7a/libgit2.so" />
+    <AndroidNativeLibrary Include="/Users/liuyang/my-android-toolchain/sysroot/usr/lib/armeabi-v7a/libcrypto.so" />
   </ItemGroup>
-
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="LibGit2Sharp\" />
-    <Folder Include="Assets\clojure\" />
     <Folder Include="Assets\my-scripts\" />
+    <Folder Include="Resources\Assets\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\clojure\core.clj" />
-    <AndroidAsset Include="Assets\clojure\core_clr.clj" />
-    <AndroidAsset Include="Assets\clojure\core_deftype.clj" />
-    <AndroidAsset Include="Assets\clojure\core_print.clj" />
-    <AndroidAsset Include="Assets\clojure\core_proxy.clj" />
-    <AndroidAsset Include="Assets\clojure\data.clj" />
-    <AndroidAsset Include="Assets\clojure\dm-test.clj" />
-    <AndroidAsset Include="Assets\clojure\edn.clj" />
-    <AndroidAsset Include="Assets\clojure\genclass.clj" />
-    <AndroidAsset Include="Assets\clojure\gvec.clj" />
-    <AndroidAsset Include="Assets\clojure\instant.clj" />
-    <AndroidAsset Include="Assets\clojure\main.clj" />
-    <AndroidAsset Include="Assets\clojure\pprint.clj" />
-    <AndroidAsset Include="Assets\clojure\reflect.clj" />
-    <AndroidAsset Include="Assets\clojure\repl.clj" />
-    <AndroidAsset Include="Assets\clojure\run_tests.clj" />
-    <AndroidAsset Include="Assets\clojure\run_tests_i.clj" />
-    <AndroidAsset Include="Assets\clojure\set.clj" />
-    <AndroidAsset Include="Assets\clojure\stacktrace.clj" />
-    <AndroidAsset Include="Assets\clojure\string.clj" />
-    <AndroidAsset Include="Assets\clojure\template.clj" />
-    <AndroidAsset Include="Assets\clojure\test.clj" />
-    <AndroidAsset Include="Assets\clojure\test_helper.clj" />
-    <AndroidAsset Include="Assets\clojure\uuid.clj" />
-    <AndroidAsset Include="Assets\clojure\walk.clj" />
-    <AndroidAsset Include="Assets\clojure\zip.clj" />
-    <AndroidAsset Include="Assets\clojure\clr\io.clj" />
-    <AndroidAsset Include="Assets\clojure\clr\shell.clj" />
-    <AndroidAsset Include="Assets\clojure\core\protocols.clj" />
-    <AndroidAsset Include="Assets\clojure\core\reducers.clj" />
-    <AndroidAsset Include="Assets\clojure\pprint\cl_format.clj" />
-    <AndroidAsset Include="Assets\clojure\pprint\column_writer.clj" />
-    <AndroidAsset Include="Assets\clojure\pprint\dispatch.clj" />
-    <AndroidAsset Include="Assets\clojure\pprint\pprint_base.clj" />
-    <AndroidAsset Include="Assets\clojure\pprint\pretty_writer.clj" />
-    <AndroidAsset Include="Assets\clojure\pprint\print_table.clj" />
-    <AndroidAsset Include="Assets\clojure\pprint\utilities.clj" />
-    <AndroidAsset Include="Assets\clojure\reflect\clr.clj" />
-    <AndroidAsset Include="Assets\clojure\samples\ants.clj" />
-    <AndroidAsset Include="Assets\clojure\samples\await-test.clj" />
-    <AndroidAsset Include="Assets\clojure\samples\celsius.clj" />
-    <AndroidAsset Include="Assets\clojure\samples\counter.clj" />
-    <AndroidAsset Include="Assets\clojure\samples\attributes\testattribute.clj" />
-    <AndroidAsset Include="Assets\clojure\samples\deftype\testdeftype.clj" />
-    <AndroidAsset Include="Assets\clojure\samples\deftype\testprotocol.clj" />
-    <AndroidAsset Include="Assets\clojure\samples\genclass\testgenclass.clj" />
-    <AndroidAsset Include="Assets\clojure\samples\genclass\testgenclass2.clj" />
-    <AndroidAsset Include="Assets\clojure\samples\genclass\testgenclass3.clj" />
-    <AndroidAsset Include="Assets\clojure\samples\genclass\testmvc.clj" />
-    <AndroidAsset Include="Assets\clojure\samples\interop\testinterop.clj" />
-    <AndroidAsset Include="Assets\clojure\samples\proxy\testproxy.clj" />
-    <AndroidAsset Include="Assets\clojure\samples\stm\teststm.clj" />
-    <AndroidAsset Include="Assets\clojure\test\junit.clj" />
-    <AndroidAsset Include="Assets\clojure\test\tap.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\agents.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\atoms.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\attributes.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\clojure_set.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\clojure_walk.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\clojure_xml.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\clojure_zip.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\compilation.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\control.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\data.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\data_structures.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\def.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\edn.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\errors.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\evaluation.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\fn.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\for.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\genclass.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\generators.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\java_interop.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\keywords.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\logic.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\macros.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\main.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\metadata.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\multimethods.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\ns_libs.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\numbers.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\other_functions.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\parallel.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\pprint.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\predicates.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\printer.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\protocols.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\reader.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\reducers.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\refs.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\repl.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\rt.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\sequences.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\serialization.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\special.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\string.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\test.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\test_fixtures.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\transients.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\try_catch.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\vars.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\vectors.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\clr\io.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\genclass\examples.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\pprint\test_cl_format.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\pprint\test_helper.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\pprint\test_pretty.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\protocols\examples.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\protocols\hash_collisions.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\protocols\more_examples.clj" />
-    <AndroidAsset Include="Assets\clojure\test_clojure\repl\example.clj" />
     <AndroidAsset Include="Assets\my-scripts\temp-test.clj" />
   </ItemGroup>
 </Project>

@@ -2,3 +2,6 @@
 
 (defn foo [a b]
   (str a " " b))
+  
+(defn fuck []
+	"sdfdsf")

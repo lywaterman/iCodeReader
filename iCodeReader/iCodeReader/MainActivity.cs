@@ -13,6 +13,7 @@ using LibGit2Sharp;
 using LibGit2Sharp.Core;
 
 using clojure.lang;
+using clojure.runtime;
 
 namespace iCodeReader
 {
@@ -40,26 +41,24 @@ namespace iCodeReader
 
 			EditText edit = FindViewById<EditText> (Resource.Id.editText1);
 
-			Console.WriteLine (System.Environment.Version);
+			RuntimeBootstrapFlag.DisableFileLoad = true;
 
-			Console.WriteLine (System.Environment.OSVersion);
-			
+			string temp_test = "";
+			using (StreamReader sr = new StreamReader (this.BaseContext.Assets.Open ("my-scripts/temp-test.clj")))
+				temp_test = sr.ReadToEnd ();
+
+			var load_string = RT.var ("clojure.core", "load-string");
+
+			load_string.invoke (temp_test);
+
+			Var foo = RT.var("user", "fuck");
+
 			button.Click += delegate {
 				button.Text = string.Format ("{0} clicks!", count++);
 
-				//var stream = this.BaseContext.Assets.Open("clojure/core.clj");
+				Object result = foo.invoke();
 
-				//string temp_test = "";
-				//using (StreamReader sr = new StreamReader (this.BaseContext.Assets.Open ("clojure/core.clj")))
-				//	temp_test = sr.ReadToEnd ();
- 				
-				//RT.readString(temp_test);
-
-				//Var foo = RT.var("user", "foo");
-
-				//Object result = foo.invoke("Hi", "there");
-
-				//Console.WriteLine(result);
+				Console.WriteLine(result);
 
 				//System.Console.WriteLine("i call giterr_set_oom");
 				//giterr_set_oom();
