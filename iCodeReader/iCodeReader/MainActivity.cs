@@ -54,12 +54,20 @@ namespace iCodeReader
 
 			Var foo = RT.var("user", "fuck");
 
+			WebView browser = FindViewById<WebView> (Resource.Id.webView1);
+
+			browser.Settings.JavaScriptEnabled = true;
+
 			button.Click += delegate {
 				button.Text = string.Format ("{0} clicks!", count++);
 
 				Object result = foo.invoke();
 
 				Console.WriteLine(result);
+
+				Var load = RT.var("user", "load-web");
+
+				load.invoke(browser);
 
 				//System.Console.WriteLine("i call giterr_set_oom");
 				//giterr_set_oom();
@@ -79,11 +87,6 @@ namespace iCodeReader
 				//Repository.CloneNoCheckCer("https://github.com/lywaterman/testlibgit2sharp.git", dir.AbsolutePath+"/test");
 			};
 
-			WebView browser = FindViewById<WebView> (Resource.Id.webView1);
-
-			browser.Settings.JavaScriptEnabled = true;
-
-			browser.LoadUrl ("http://www.bing.com");
 		
 		}
 	}

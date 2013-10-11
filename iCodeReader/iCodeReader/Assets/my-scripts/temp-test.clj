@@ -10,3 +10,6 @@
   
 (defn fuck []
 	"sdfdsf")
+
+(defn load-web [a]
+	(.LoadUrl a "http://www.baidu.com"))
