@@ -1,8 +1,8 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="iCodeReader/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iCodeReader/Assets/my-scripts/temp-test.clj">
     <Files>
-      <File FileName="iCodeReader/MainActivity.cs" Line="72" Column="1" />
+      <File FileName="iCodeReader/MainActivity.cs" Line="56" Column="30" />
       <File FileName="iCodeReader/LibGit2Sharp/Core/Ensure.cs" Line="1" Column="1" />
       <File FileName="iCodeReader/Resources/AboutResources.txt" Line="1" Column="1" />
       <File FileName="iCodeReader/CodeViewActivity.cs" Line="1" Column="1" />
@@ -10,14 +10,18 @@
       <File FileName="iCodeReader/Properties/AssemblyInfo.cs" Line="1" Column="1" />
       <File FileName="../../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Common.targets" Line="1" Column="1" />
       <File FileName="iCodeReader/LibGit2Sharp/Repository.cs" Line="1" Column="1" />
+      <File FileName="iCodeReader/Assets/my-scripts/temp-test.clj" Line="7" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="iCodeReader" expanded="True" selected="True">
+          <Node name="iCodeReader" expanded="True">
             <Node name="References" expanded="True" />
-            <Node name="Assets" expanded="True" />
-            <Node name="LibGit2Sharp" expanded="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="my-scripts" expanded="True">
+                <Node name="temp-test.clj" selected="True" />
+              </Node>
+            </Node>
             <Node name="Properties" expanded="True" />
             <Node name="Resources" expanded="True" />
           </Node>
